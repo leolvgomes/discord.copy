@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #ffffff;
+    color: #23272A;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+h1, h2 {
+    font-weight: 800;
+}
+
+p {
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+.hero {
+    background-image: url("img/header-bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    padding: 160px 0;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    background: linear-gradient(180deg, rgba(88,101,242,0.85), rgba(88,101,242,0.60));
+    z-index: 0;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    max-width: 620px;
+    margin: auto;
+    font-size: 18px;
+}
+
+.buttons {
+    margin-top: 25px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 14px 26px;
+    border-radius: 28px;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn.white {
+    background: white;
+    color: #23272A;
+}
+
+.btn.dark {
+    background: #23272A;
+    color: white;
+}
+
+.section {
+    padding: 90px 0;
+}
+
+.section.light {
+    background: #F6F6F6;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.grid.reverse {
+    grid-template-columns: 1fr 1fr;
+    direction: rtl;
+}
+
+.grid.reverse .text {
+    direction: ltr;
+}
+
+.illustration {
+    width: 100%;
+    max-width: 500px;
+}
+
+.text h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.center {
+    text-align: center;
+}
+
+.big-illustration {
+    margin-top: 40px;
+    width: 100%;
+    max-width: 800px;
+}
+
+footer {
+    background: #23272A;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer-logo {
+    width: 160px;
+}
+
+@media (max-width: 900px) {
+
+    .grid,
+    .grid.reverse {
+        grid-template-columns: 1fr;
+        text-align: center;
+        direction: ltr;
+    }
+
+    .illustration {
+        margin: auto;
+    }
+
+    .text h2 {
+        font-size: 26px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+}
